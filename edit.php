@@ -2,9 +2,9 @@
   
   include('koneksi.php');
   
-  $id = $_GET['id'];
+  $nik = $_GET['nik'];
   
-  $query = "SELECT * FROM tbl_riwayat_absen WHERE nik = $id LIMIT 1";
+  $query = "SELECT * FROM tbl_riwayat_absen WHERE nik = $nik LIMIT 1";
 
   $result = mysqli_query($connection, $query);
 
@@ -35,13 +35,13 @@
                 
                 <div class="form-group">
                   <label>NIK</label>
-                  <input type="number" name="nik" value="<?php echo $row['nik'] ?>" placeholder="Masukkan NIK" class="form-control”>
-                  <input type="hidden" name="nik" value="<?php echo $row['id_siswa'] ?>">
+                  <input type="number" name="nik" value="<?php echo $row['nik'] ?>" placeholder="Masukkan NIK" class="form-control">
+                  <input type="hidden" name="nik_1" value="<?php echo $row['nik'] ?>" placeholder="Masukkan NIK" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Nama Lengkap</label>
-                  <input type="text" name="nama_lengkap" value="<?php echo $row['nama_lengkap'] ?>" placeholder="Masukkan Nama Siswa" class="form-control">
+                  <input type="text" name="nama_pegawai" value="<?php echo $row['nama_pegawai'] ?>" placeholder="Masukkan Nama Siswa" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -54,10 +54,7 @@
                   </select>
                 </div>
 
-                <div class="form-group">
-                  <label>Jam Masuk</label>
-                  <input type="time" name="j_masuk" class="form-control">
-                </div>
+          
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>

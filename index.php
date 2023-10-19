@@ -27,6 +27,7 @@
                     <th scope="col">NAMA LENGKAP</th>
                     <th scope="col">JABATAN</th>
                     <th scope="col">JAM MASUK</th>
+                    <th scope="col">JAM KELUAR</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
@@ -40,15 +41,15 @@
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['niK'] ?></td>
-                      <td><?php echo $row['nama_lengkap'] ?></td>
-                      <td><?php echo $row['alamat'] ?></td>
+                      <td><?php echo $row['nik'] ?></td>
+                      <td><?php echo $row['nama_pegawai'] ?></td>
                       <td><?php echo $row['jabatan'] ?></td>
                       <td><?php echo $row['jam_masuk'] ?></td>
                       <td><?php echo $row['jam_pulang']?></td>
                       <td class="text-center">
-                        <a href="edit.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-primary">EDIT</a>
-                        <a href="hapus.php?id=<?php echo $row['id_karyawan'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="edit.php?nik=<?php echo $row['nik'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                        <a href="hapus.php?nik=<?php echo $row['nik'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="keluar.php?nik=<?php echo $row['nik'] ?>" class="btn btn-sm btn-success">KELUAR</a>
                       </td>
                   </tr>
 

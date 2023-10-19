@@ -3,8 +3,12 @@
 include('koneksi.php');
 
 //get id
-$id_karyawan = $_POST['id_karyawan'];
+$nik = $_GET['nik'];
 
 
-$query = 
+$query = "UPDATE tbl_riwayat_absen SET jam_pulang = now() WHERE nik = '$nik'";
 
+$result = mysqli_query($connection, $query);
+header("Location: index.php");
+
+?>

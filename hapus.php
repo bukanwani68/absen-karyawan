@@ -3,9 +3,9 @@
 include('koneksi.php');
 
 //get id
-$id = $_GET['id'];
+$id = $_GET['nik'];
 
-$query = "DELETE FROM tbl_riwayat_absen WHERE id_karyawan = '$id'";
+$query = "DELETE FROM tbl_riwayat_absen WHERE nik = '$id'";
 
 if($connection->query($query)) {
     header("location: index.php");
